@@ -5,8 +5,14 @@ mod variables;
 
 mod arcmutex;
 
+mod lazystatic;
+
 fn main() {
     println!("Hello, world!");
+
+    lazystatic::lazystatic::print_me();
+
+    // lazystatic::print_me();
     
     // loops::for_loop::run_for_loop();
     // loops::loop_over_vec::vec_loop();
@@ -24,7 +30,8 @@ fn main() {
     //     variables::process_record(String::from("Azhar "));
     // }
     
-    arcmutex::print_me();
+    // arcmutex::print_me();
+    
 }
 
 
