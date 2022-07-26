@@ -5,11 +5,9 @@ use lazy_static::lazy_static;
     
 use std::sync::{Mutex, Arc};
 
-
 lazy_static! {
     static ref my_messages : Arc<Mutex<Vec<String>>> = Arc::new(Mutex::new(vec![String::from("Hello world")]));
 }
-
 
 #[automock]
 pub mod lazystatic {
