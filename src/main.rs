@@ -6,6 +6,8 @@
 #![allow(non_upper_case_globals)]
 #![allow(non_snake_case)]
 
+use structs::structs::User;
+
 mod loops;
 
 mod variables;
@@ -47,8 +49,13 @@ fn main() {
 
     let az = structs::structs::create_user();
     
+    print_me(&az);
     println!("{:?}", az);
-    
+
 }
 
 
+fn print_me(user : &User) {
+    println!("{:?}", user);
+}
+ 
