@@ -14,11 +14,15 @@ mod arcmutex;
 
 mod lazystatic;
 
+
+mod thread;
+
 fn main() {
     println!("Hello, world!");
 
-    lazystatic::lazystatic::print_me();
+    // lazystatic::lazystatic::print_me();
 
+    thread::thread::run_thread();
     // lazystatic::print_me();
     
     // loops::for_loop::run_for_loop();
