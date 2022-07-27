@@ -17,12 +17,14 @@ mod lazystatic;
 
 mod thread;
 
+mod structs;
+
 fn main() {
     println!("Hello, world!");
 
     // lazystatic::lazystatic::print_me();
 
-    thread::thread::run_thread();
+    // thread::thread::run_thread();
     // lazystatic::print_me();
     
     // loops::for_loop::run_for_loop();
@@ -42,6 +44,10 @@ fn main() {
     // }
     
     // arcmutex::print_me();
+
+    let az = structs::structs::create_user();
+    
+    println!("{:?}", az);
     
 }
 
