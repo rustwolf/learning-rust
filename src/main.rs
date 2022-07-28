@@ -61,9 +61,9 @@ fn main() {
     //     println!("{}", name);
     // }
 
-    // iterators::iterators::main();
+    iterators::iterators::main();
 
-    options::options::main();
+    // options::options::main();
     
 }
 
