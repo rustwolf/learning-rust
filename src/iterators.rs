@@ -6,4 +6,9 @@ pub mod iterators {
             String::from("Sheetal"),
         ];
     }
+
+
+    pub fn main() {
+        println!("Hello from Iterators");
+    }
 }

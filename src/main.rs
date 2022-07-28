@@ -23,7 +23,7 @@ mod structs;
 mod iterators;
 
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, world & Rust Developers ");
 
     // lazystatic::lazystatic::print_me();
 
@@ -53,11 +53,13 @@ fn main() {
     // print_me(&az);
     // println!("{:?}", az);
 
-    let names = iterators::iterators::create_iter();
+    // let names = iterators::iterators::create_iter();
     
-    for name in names {
-        println!("{}", name);
-    }
+    // for name in names {
+    //     println!("{}", name);
+    // }
+
+    iterators::iterators::main();
 
 }
 
