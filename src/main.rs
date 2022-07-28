@@ -22,6 +22,8 @@ mod structs;
 
 mod iterators;
 
+mod options;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
@@ -59,8 +61,10 @@ fn main() {
     //     println!("{}", name);
     // }
 
-    iterators::iterators::main();
+    // iterators::iterators::main();
 
+    options::options::main();
+    
 }
 
 
