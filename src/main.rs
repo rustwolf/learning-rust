@@ -16,10 +16,11 @@ mod arcmutex;
 
 mod lazystatic;
 
-
 mod thread;
 
 mod structs;
+
+mod iterators;
 
 fn main() {
     println!("Hello, world!");
@@ -47,15 +48,21 @@ fn main() {
     
     // arcmutex::print_me();
 
-    let az = structs::structs::create_user();
+    // let az = structs::structs::create_user();
     
-    print_me(&az);
-    println!("{:?}", az);
+    // print_me(&az);
+    // println!("{:?}", az);
+
+    let names = iterators::iterators::create_iter();
+    
+    for name in names {
+        println!("{}", name);
+    }
 
 }
 
 
 fn print_me(user : &User) {
+    // user.clone();
     println!("{:?}", user);
 }
- 
