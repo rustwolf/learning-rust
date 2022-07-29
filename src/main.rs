@@ -24,6 +24,8 @@ mod iterators;
 
 mod options;
 
+mod async_mod;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
