@@ -26,10 +26,32 @@ mod options;
 
 mod async_mod;
 
+mod lazy_static_queue;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
-    // lazystatic::lazystatic::print_me();
+
+    // lazy_static_queue::lazy_static_queue::test_queue();
+
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 1"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 2"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 3"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 4"));
+
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 5"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 6"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 7"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 8"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 9"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 10"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 11"));
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 12"))
+    ;
+
+    // lazy_static_queue::lazy_static_queue::tes
+
+    //lazystatic::lazystatic::print_me();
 
     // thread::thread::run_thread();
     // lazystatic::print_me();
@@ -67,10 +89,10 @@ fn main() {
 
     // options::options::main();
 
-    async {
-        let data = async_mod::async_mod::main().await;
-        println!("{}", data);
-    };
+    // async {
+    //     let data = async_mod::async_mod::main().await;
+    //     println!("{}", data);
+    // };
     
 }
 

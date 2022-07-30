@@ -23,8 +23,11 @@ pub mod lazystatic {
             for i in 1..10 {
                 println!("hi number {} from the spawned thread!", i);
                 let my_message = super::my_messages.clone();
-
                 my_message.lock().unwrap().push(String::from("Hi there we are here !!"));
+
+                if my_message.lock().unwrap().len() == 10 {
+                    println!(">>>>>>>>>>>>>>>>>>>> We need to drain the queue");
+                }
             }
         });
     
