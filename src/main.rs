@@ -67,7 +67,10 @@ fn main() {
 
     // options::options::main();
 
-    async_mod::async_mod::main();
+    async {
+        let data = async_mod::async_mod::main().await;
+        println!("{}", data);
+    };
     
 }
 
