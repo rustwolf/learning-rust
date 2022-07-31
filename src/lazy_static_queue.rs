@@ -1,12 +1,11 @@
-
 use mockall::automock;
 
 use lazy_static::lazy_static;
-    
-use std::sync::{Mutex, Arc};
+
+use std::sync::{Arc, Mutex};
 
 lazy_static! {
-    static ref my_messages : Arc<Mutex<Vec<String>>> = Arc::new(Mutex::new(vec![]));
+    static ref my_messages: Arc<Mutex<Vec<String>>> = Arc::new(Mutex::new(vec![]));
 }
 
 #[automock]
@@ -18,17 +17,18 @@ pub mod lazy_static_queue {
         println!("{:?} Are removed Elements", removed_ele);
     }
 
-
     pub fn print_me() {
         println!("Hi there, we are in lazy static");
     }
 
-    pub fn add_message(str : String) {
+    pub fn add_message(str: String) {
         let a = super::my_messages.clone();
         a.lock().unwrap().push(str);
-    
 
-        println!("Added New Message The length is now {}", a.lock().unwrap().len());
+        println!(
+            "Added New Message The length is now {}",
+            a.lock().unwrap().len()
+        );
 
         if a.lock().unwrap().len() == 10 {
             let ba = super::my_messages.clone();
@@ -36,12 +36,13 @@ pub mod lazy_static_queue {
             let items = removed_items.drain(0..10);
 
             println!("Removed Elements  >>>>>>>>  {:?}", items);
-
         }
+
         let again = super::my_messages.clone();
 
-        println!("New Length is now >>>>>>>>  {}", again.lock().unwrap().len());
-
-
+        println!(
+            "New Length is now >>>>>>>>  {}",
+            again.lock().unwrap().len()
+        );
     }
 }

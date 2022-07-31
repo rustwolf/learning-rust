@@ -1,5 +1,5 @@
 pub mod async_mod {
-    
+
     pub async fn run_async() -> i32 {
         10
     }
@@ -11,7 +11,7 @@ pub mod async_mod {
         let b = async {
             a = run_async().await;
             println!("We are in Async {}", a);
-        };        
+        };
         200
     }
 }

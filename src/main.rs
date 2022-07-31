@@ -1,4 +1,3 @@
-
 #![allow(dead_code)]
 #![allow(unused_variables)]
 #![allow(unused_imports)]
@@ -31,7 +30,6 @@ mod lazy_static_queue;
 fn main() {
     println!("Hello, world & Rust Developers ");
 
-
     // lazy_static_queue::lazy_static_queue::test_queue();
 
     lazy_static_queue::lazy_static_queue::add_message(String::from("Message 1"));
@@ -46,8 +44,7 @@ fn main() {
     lazy_static_queue::lazy_static_queue::add_message(String::from("Message 9"));
     lazy_static_queue::lazy_static_queue::add_message(String::from("Message 10"));
     lazy_static_queue::lazy_static_queue::add_message(String::from("Message 11"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 12"))
-    ;
+    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 12"));
 
     // lazy_static_queue::lazy_static_queue::tes
 
@@ -55,7 +52,7 @@ fn main() {
 
     // thread::thread::run_thread();
     // lazystatic::print_me();
-    
+
     // loops::for_loop::run_for_loop();
     // loops::loop_over_vec::vec_loop();
     // loops::infinite_loop::run_infinite_loop();
@@ -71,16 +68,16 @@ fn main() {
     // for i in 0..11 {
     //     variables::process_record(String::from("Azhar "));
     // }
-    
+
     // arcmutex::print_me();
 
     // let az = structs::structs::create_user();
-    
+
     // print_me(&az);
     // println!("{:?}", az);
 
     // let names = iterators::iterators::create_iter();
-    
+
     // for name in names {
     //     println!("{}", name);
     // }
@@ -93,11 +90,9 @@ fn main() {
     //     let data = async_mod::async_mod::main().await;
     //     println!("{}", data);
     // };
-    
 }
 
-
-fn print_me(user : &User) {
+fn print_me(user: &User) {
     // user.clone();
     println!("{:?}", user);
 }
