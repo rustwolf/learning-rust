@@ -27,6 +27,8 @@ mod async_mod;
 
 mod lazy_static_queue;
 
+mod reference;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
@@ -90,6 +92,8 @@ fn main() {
     //     let data = async_mod::async_mod::main().await;
     //     println!("{}", data);
     // };
+
+    reference::refereneces::main();
 }
 
 fn print_me(user: &User) {
