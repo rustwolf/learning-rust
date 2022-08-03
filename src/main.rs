@@ -29,6 +29,8 @@ mod lazy_static_queue;
 
 mod reference;
 
+mod tokio_run;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
@@ -93,7 +95,9 @@ fn main() {
     //     println!("{}", data);
     // };
 
-    reference::refereneces::main();
+    // reference::refereneces::main();
+
+    tokio_run::tokio_run::main_run();
 }
 
 fn print_me(user: &User) {
