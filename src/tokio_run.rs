@@ -6,10 +6,17 @@ pub mod tokio_run {
 
         let data = get_data().await;
 
+
         println!("We GOT the DATA {}", data);
     }
 
     pub async fn get_data() -> i32 {
-        1020
+
+        let more = new_data().await;
+        1020 + more
+    }
+
+    pub async fn new_data() -> i32 {
+        200
     }
 }
