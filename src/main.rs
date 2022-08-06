@@ -36,19 +36,19 @@ fn main() {
 
     // lazy_static_queue::lazy_static_queue::test_queue();
 
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 1"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 2"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 3"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 4"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 1"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 2"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 3"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 4"));
 
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 5"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 6"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 7"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 8"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 9"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 10"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 11"));
-    lazy_static_queue::lazy_static_queue::add_message(String::from("Message 12"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 5"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 6"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 7"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 8"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 9"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 10"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 11"));
+    // lazy_static_queue::lazy_static_queue::add_message(String::from("Message 12"));
 
     // lazy_static_queue::lazy_static_queue::tes
 
@@ -98,6 +98,7 @@ fn main() {
     // reference::refereneces::main();
 
     tokio_run::tokio_run::main_run();
+    
 }
 
 fn print_me(user: &User) {
