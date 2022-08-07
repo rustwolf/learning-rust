@@ -31,6 +31,8 @@ mod reference;
 
 mod tokio_run;
 
+mod strings;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
@@ -97,8 +99,10 @@ fn main() {
 
     // reference::refereneces::main();
 
-    tokio_run::tokio_run::main_run();
-    
+    // tokio_run::tokio_run::main_run();
+
+    strings::strings::main();
+
 }
 
 fn print_me(user: &User) {
