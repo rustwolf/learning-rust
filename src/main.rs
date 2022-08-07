@@ -33,6 +33,8 @@ mod tokio_run;
 
 mod strings;
 
+mod match_mod;
+
 fn main() {
     println!("Hello, world & Rust Developers ");
 
@@ -101,7 +103,9 @@ fn main() {
 
     // tokio_run::tokio_run::main_run();
 
-    strings::strings::main();
+    // strings::strings::main();
+
+    match_mod::match_mod::main();
 
 }
 
