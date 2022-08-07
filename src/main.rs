@@ -79,7 +79,7 @@ fn main() {
 
     // arcmutex::print_me();
 
-    // let az = structs::structs::create_user();
+    let az = structs::structs::create_user();
 
     // print_me(&az);
     // println!("{:?}", az);
@@ -105,7 +105,7 @@ fn main() {
 
     // strings::strings::main();
 
-    match_mod::match_mod::main();
+    // match_mod::match_mod::main();
 
 }
 

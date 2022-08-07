@@ -8,6 +8,14 @@ pub mod structs {
         sign_in_count: u32,
     }
 
+    #[derive(Default, Debug)]
+    pub struct Vehicle {
+        color : String,
+        wheels_count : u32,
+        speed_limit : u32,
+        is_automatic : bool
+    }
+
     pub fn create_user() -> User {
         let azhar = User {
             name: String::from("Azhar uddin"),
@@ -15,6 +23,12 @@ pub mod structs {
             is_active: true,
             sign_in_count: 20,
         };
+
+        let a = Vehicle{
+            ..Default::default()
+        };
+
+        println!("{:?}", a);
 
         azhar
     }
