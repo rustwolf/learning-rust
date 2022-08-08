@@ -10,10 +10,10 @@ pub mod structs {
 
     #[derive(Default, Debug)]
     pub struct Vehicle {
-        color : String,
-        wheels_count : u32,
-        speed_limit : u32,
-        is_automatic : bool
+        color: String,
+        wheels_count: u32,
+        speed_limit: u32,
+        is_automatic: bool,
     }
 
     pub fn create_user() -> User {
@@ -24,7 +24,7 @@ pub mod structs {
             sign_in_count: 20,
         };
 
-        let a = Vehicle{
+        let a = Vehicle {
             ..Default::default()
         };
 
