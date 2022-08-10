@@ -1,11 +1,9 @@
-
-
 pub mod dynamodb {
 
     use aws_config::meta::region::RegionProviderChain;
     use aws_sdk_dynamodb::{Client, Endpoint, Error};
     use http::Uri;
-    
+
     pub fn main() -> Result<(), Error> {
         println!("Hello we are in rust, dynamodb");
 

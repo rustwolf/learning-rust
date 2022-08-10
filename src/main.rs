@@ -45,18 +45,22 @@ mod match_mod;
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
-
-    
     let data = get_name_async().await;
     println!("{:?}", data.unwrap());
-
+    println!("{}", add_numbers(10.00, 12.04));
 }
-
 
 async fn get_name_async() -> Result<String, String> {
     Ok(String::from("Azhar is here"))
 }
+
 fn print_me(user: &User) {
     // user.clone();
     println!("{:?}", user);
+
+}
+
+
+fn add_numbers<T:std::ops::Add>(a:T, b:T) -> <T as std::ops::Add>::Output {
+    a + b
 }
