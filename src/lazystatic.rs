@@ -19,7 +19,7 @@ pub mod lazystatic {
         // super::my_messages;
 
         let handle = thread::spawn(|| {
-            for i in 1..10 {
+            for i in 1..15 {
                 println!("hi number {} from the spawned thread!", i);
                 let my_message = super::my_messages.clone();
                 my_message
