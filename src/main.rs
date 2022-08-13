@@ -8,7 +8,7 @@
 use aws_config::meta::region::RegionProviderChain;
 use aws_sdk_dynamodb::{Client, Endpoint, Error};
 use http::Uri;
-use std::*;
+use std::{*, sync::Mutex};
 
 use structs::structs::User;
 
@@ -40,16 +40,28 @@ mod strings;
 
 mod match_mod;
 
+mod learnmutex;
+
 // mod dynamodb;
 
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
-    let data = get_name_async().await;
-    println!("{:?}", data.unwrap());
-    println!("{}", add_numbers(10.00, 12.04));
+    // let data = get_name_async().await;
+    // println!("{:?}", data.unwrap());
+    // println!("{}", add_numbers(10.00, 12.04));
+    let a = learnmutex::learnmutex::main();
+
+    a.lock().unwrap().push(String::from("outside"));
+    
+    pass_ref(&a);
+    
+    println!("{:?}", a);
 }
 
+fn pass_ref(something : &Mutex<Vec<String>>) {
+    something.lock().unwrap().push(String::from("pass ref called"));
+}
 async fn get_name_async() -> Result<String, String> {
     Ok(String::from("Azhar is here"))
 }
@@ -59,7 +71,6 @@ fn print_me(user: &User) {
     println!("{:?}", user);
 
 }
-
 
 fn add_numbers<T:std::ops::Add>(a:T, b:T) -> <T as std::ops::Add>::Output {
     a + b
