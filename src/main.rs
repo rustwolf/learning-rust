@@ -44,19 +44,15 @@ mod learnmutex;
 
 // mod dynamodb;
 
+
+mod ownership;
+
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
-    // let data = get_name_async().await;
-    // println!("{:?}", data.unwrap());
-    // println!("{}", add_numbers(10.00, 12.04));
-    let a = learnmutex::learnmutex::main();
+    
+    ownership::ownership::main();
 
-    a.lock().unwrap().push(String::from("outside"));
-    
-    pass_ref(&a);
-    
-    println!("{:?}", a);
 }
 
 fn pass_ref(something : &Mutex<Vec<String>>) {
