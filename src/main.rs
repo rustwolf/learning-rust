@@ -44,6 +44,8 @@ mod learnmutex;
 
 // mod dynamodb;
 
+mod iters;
+
 
 mod ownership;
 
@@ -51,7 +53,8 @@ mod ownership;
 async fn main() {
     println!("Hello, world & Rust Developers");
     
-    ownership::ownership::main();
+    // ownership::ownership::main();
+    iters::iters::main();
 
 }
 
