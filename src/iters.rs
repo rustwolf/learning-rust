@@ -9,6 +9,5 @@ pub mod iters {
         }
 
         // names.iter().map(|name| format!("{}{}", name, " is very good boy/girl")).collect();
-
     }
 }

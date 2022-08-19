@@ -8,7 +8,7 @@
 use aws_config::meta::region::RegionProviderChain;
 use aws_sdk_dynamodb::{Client, Endpoint, Error};
 use http::Uri;
-use std::{*, sync::Mutex};
+use std::{sync::Mutex, *};
 
 use structs::structs::User;
 
@@ -46,20 +46,29 @@ mod learnmutex;
 
 mod iters;
 
-
 mod ownership;
+
+
+mod learnenums;
 
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
-    
+
+    println!("Lets do some rust coding {}", String::from("Hello world"));
+
     // ownership::ownership::main();
-    iters::iters::main();
+    // iters::iters::main();'
+
+    learnenums::learnenums::main();
 
 }
 
-fn pass_ref(something : &Mutex<Vec<String>>) {
-    something.lock().unwrap().push(String::from("pass ref called"));
+fn pass_ref(something: &Mutex<Vec<String>>) {
+    something
+        .lock()
+        .unwrap()
+        .push(String::from("pass ref called"));
 }
 async fn get_name_async() -> Result<String, String> {
     Ok(String::from("Azhar is here"))
@@ -68,9 +77,8 @@ async fn get_name_async() -> Result<String, String> {
 fn print_me(user: &User) {
     // user.clone();
     println!("{:?}", user);
-
 }
 
-fn add_numbers<T:std::ops::Add>(a:T, b:T) -> <T as std::ops::Add>::Output {
+fn add_numbers<T: std::ops::Add>(a: T, b: T) -> <T as std::ops::Add>::Output {
     a + b
 }
