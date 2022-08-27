@@ -12,6 +12,13 @@ pub mod learnenums {
             Item::Something(a) => { println!("{}",a)},
             Item::Nothing => { println!("WE found nothing")}
         }
+        let name = get_name().unwrap();
+
+        println!("{}", name);
         println!("{:?}", a);
+    }
+
+    pub fn get_name() -> Option<String>{
+        Some(String::from("Hello some type"))
     }
 }
