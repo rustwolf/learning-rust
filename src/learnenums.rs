@@ -16,9 +16,16 @@ pub mod learnenums {
 
         println!("{}", name);
         println!("{:?}", a);
+        let roll = get_name_box();
+
+        println!("{}", roll)
     }
 
     pub fn get_name() -> Option<String>{
         Some(String::from("Hello some type"))
+    }
+
+    pub fn get_name_box() -> Box<i32> {
+        return Box::new(100);
     }
 }
