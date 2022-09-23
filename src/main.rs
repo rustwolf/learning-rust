@@ -50,6 +50,8 @@ mod ownership;
 
 mod learnenums;
 
+mod jsonlearn;
+
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
@@ -60,6 +62,8 @@ async fn main() {
     // iters::iters::main();'
 
     learnenums::learnenums::main();
+
+    jsonlearn::jsonlearn::main();
 }
 
 fn pass_ref(something: &Mutex<Vec<String>>) {
