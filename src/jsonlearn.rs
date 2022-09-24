@@ -25,5 +25,13 @@ pub mod jsonlearn {
         };
 
         println!("We are learning JSON {}", serde_json::to_string(&sheetal).unwrap());
+
+        let json_string =  serde_json::to_string(&sheetal).unwrap();
+
+        let sheetalNew : Person = serde_json::from_str(&json_string).unwrap();
+
+        println!("Age is {}", sheetalNew.age);
+
     }
+
 }
