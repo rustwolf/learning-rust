@@ -14,7 +14,6 @@ struct Message {
 }
 
 pub fn print_me() {
-
     // let myvalue = Mutex::new(10);
     let mut MessagesList: Mutex<Vec<Message>> = Mutex::new(vec![Message {
         name: String::from("Azhar is here"),
