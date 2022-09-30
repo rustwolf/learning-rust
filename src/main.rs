@@ -52,6 +52,8 @@ mod learnenums;
 
 mod jsonlearn;
 
+mod refcell_learn;
+
 #[tokio::main]
 async fn main() {
     println!("Hello, world & Rust Developers");
@@ -64,7 +66,11 @@ async fn main() {
     learnenums::learnenums::main();
 
     jsonlearn::jsonlearn::main();
+
+    refcell_learn::refcell_learn::main();
 }
+
+
 
 fn pass_ref(something: &Mutex<Vec<String>>) {
     something
