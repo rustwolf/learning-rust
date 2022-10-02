@@ -12,6 +12,14 @@ pub mod refcell_learn {
             name : String::from("Azhar")
         };
 
+        let you = Person {
+            name : String::from("Jon");
+        };
+
+        let b = Box::new(you);
+
+        
+
         let ref_me = RefCell::new(me);
 
         // println!("Learning refcell_learn {:?}", ref_me.into_inner());
