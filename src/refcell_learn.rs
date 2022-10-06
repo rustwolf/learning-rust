@@ -3,30 +3,23 @@ pub mod refcell_learn {
 
     #[derive(Debug)]
     pub struct Person {
-        pub name : String
+        pub name: String,
     }
 
     pub fn main() {
-
         let mut me = Person {
-            name : String::from("Azhar")
+            name: String::from("Azhar"),
         };
 
         let you = Person {
-            name : String::from("Jon");
+            name: String::from("Jon"),
         };
 
         let b = Box::new(you);
 
-        
-
         let ref_me = RefCell::new(me);
 
-        // println!("Learning refcell_learn {:?}", ref_me.into_inner());
-
         change_name(ref_me.into_inner());
-
-        // let cell = RefCell::new(me);
     }
 
     pub fn change_name(mut person: Person) {
@@ -34,5 +27,4 @@ pub mod refcell_learn {
 
         println!("{}", person.name);
     }
-
 }

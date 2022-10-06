@@ -70,8 +70,6 @@ async fn main() {
     refcell_learn::refcell_learn::main();
 }
 
-
-
 fn pass_ref(something: &Mutex<Vec<String>>) {
     something
         .lock()
