@@ -1,9 +1,9 @@
 use mockall::predicate::*;
 use mockall::*;
 
+use mockall::automock;
 use mockall::predicate::*;
 use mockall::*;
-use mockall::automock;
 use mockall_double::double;
 
 #[derive(Debug)]
@@ -14,7 +14,6 @@ pub struct User {
     pub citizen: bool,
     pub reward: Reward,
 }
-
 
 #[derive(Debug)]
 pub struct Reward {
