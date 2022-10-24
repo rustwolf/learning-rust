@@ -3,11 +3,6 @@ pub mod struct_tests;
 // pub mod struct_tests;
 pub mod struct_mod;
 
-#[macro_use]
-extern crate nickel;
-
-use nickel::Nickel;
-
 fn main() {
     // let mut server = Nickel::new();
 

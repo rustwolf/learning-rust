@@ -5,8 +5,10 @@ pub mod test_structs {
 
     use mockall_double::double;
 
-    #[double]
     use crate::struct_mod::get_activity;
+
+    // #[double]
+    // use crate::struct_mod::get_activity;
     // mod struct_mod;
 
     #[test]
