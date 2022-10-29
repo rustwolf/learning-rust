@@ -1,6 +1,7 @@
-
-
 use mockall_double::double;
+
+mod structs;
+
 mod person {
 
     pub fn get_name() {
