@@ -1,10 +1,3 @@
-use mockall::predicate::*;
-use mockall::*;
-
-use mockall::automock;
-use mockall::predicate::*;
-use mockall::*;
-use mockall_double::double;
 
 #[derive(Debug)]
 pub struct User {
@@ -52,3 +45,4 @@ pub fn get_activity() -> User {
 pub fn main() {
     get_activity();
 }
+

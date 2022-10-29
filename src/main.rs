@@ -1,9 +1,21 @@
-pub mod struct_tests;
 
-// pub mod struct_tests;
-pub mod struct_mod;
+
+use mockall_double::double;
+mod person {
+
+    pub fn get_name() {
+        let a = get_age();
+        println!("We are in name functions {}", a);
+    }
+
+    fn get_age() -> i32{
+        30
+    }
+}
 
 fn main() {
+
+    person::get_name();
     // let mut server = Nickel::new();
 
     // server.utilize(router! {
