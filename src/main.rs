@@ -1,5 +1,21 @@
 use mockall_double::double;
 
+
+pub trait Person {
+    fn get_name(&self);
+}
+
+struct Human {
+    pub name : String,
+    pub age: i32
+}
+
+impl Person for Human {
+    fn get_name(&self) {
+        println!("WE are in this function");
+    }
+}
+
 mod structs;
 
 mod person {
@@ -16,7 +32,13 @@ mod person {
 
 fn main() {
 
-    person::get_name();
+    let azhar = Human{name : String::from("Azhar"), age : 30};
+
+    azhar.get_name();
+
+    // azhar.get_name();
+
+    // person::get_name();
     // let mut server = Nickel::new();
 
     // server.utilize(router! {
