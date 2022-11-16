@@ -1,13 +1,12 @@
 use mockall_double::double;
 
-
 pub trait Person {
     fn get_name(&self);
 }
 
 struct Human {
-    pub name : String,
-    pub age: i32
+    pub name: String,
+    pub age: i32,
 }
 
 impl Person for Human {
@@ -25,14 +24,16 @@ mod person {
         println!("We are in name functions {}", a);
     }
 
-    fn get_age() -> i32{
+    fn get_age() -> i32 {
         30
     }
 }
 
 fn main() {
-
-    let azhar = Human{name : String::from("Azhar"), age : 30};
+    let azhar = Human {
+        name: String::from("Azhar"),
+        age: 30,
+    };
 
     azhar.get_name();
 
